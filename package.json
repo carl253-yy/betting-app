@@ -1,0 +1,38 @@
+{
+  "name": "hkjc",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "main.ts",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "electron": "electron .",
+    "electron-dev": "concurrently \"npm run dev\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-pack": "npm run build && electron-builder",
+    "build-electron": "npm run build && electron-builder --dir"
+  },
+  "dependencies": {
+    "electron-serve": "^3.0.0",
+    "next": "16.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "^39.2.7",
+    "electron-builder": "^26.4.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.1",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "wait-on": "^9.0.3"
+  }
+}
